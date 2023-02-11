@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #805a3b;
+  font-family: 'Oxygen', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.quote-box {
   display: flex;
   flex-direction: column;
+  width: 500px;
+  min-height: fit-content;
+  padding: 40px;
+  background-color: #fd974f;
+  border-radius: 10px;
+}
+
+.quote-box__text {
+  overflow-wrap: break-word;
+  margin: 0 0 25px 0;
+  color: #fef2e4;
+  font-size: 2rem;
+}
+
+.quote-box__author {
+  text-align: end;
+  margin: 0 0 25px 0;
+  color: #fef2e4;
+  font-size: 1.5rem;
+}
+
+.quote-box__control {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.quote-box__button {
+  width: 90px;
+  height: 40px;
+  color: #fef2e4;
+  background-color: #c60000;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote-box__button:hover {
+  cursor: pointer;
+  background-color: #ce2a2a;
+}
+
+.quote-box-enter {
+  opacity: 0;
+}
+
+.quote-box-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.quote-box-exit {
+  opacity: 1;
+}
+
+.quote-box-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
 }
